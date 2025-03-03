@@ -8,7 +8,8 @@ function chooseDisplay() {
     if (tasks.length === 0) {
         divEmpty.style.display = 'block';
         divNotEmpty.style.display = 'none';
-    } else {
+    }
+    else {
         divEmpty.style.display = 'none';
         divNotEmpty.style.display = 'block';
     }
