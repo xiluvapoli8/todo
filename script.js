@@ -1,14 +1,14 @@
-const items = []
+// Initialize an empty array to store tasks
+const items = [];
 
+// Select elements
 const inputField = document.querySelector("input");
 const addButton = document.getElementById("add_item");
 const taskList = document.getElementById("td_list");
 const emptyDiv = document.getElementById("empty");
 const notEmptyDiv = document.getElementById("not_empty");
 
-
-
-// Function to update the display based on array length
+// Function to update the visibility of list divisions
 const updateListVisibility = () => {
     if (items.length === 0) {
         emptyDiv.style.display = "block";  // Show "Your list is empty"
@@ -17,7 +17,7 @@ const updateListVisibility = () => {
         emptyDiv.style.display = "none";  // Hide "Your list is empty"
         notEmptyDiv.style.display = "block"; // Show task list
 
-        // Clear existing list before adding new ones
+        // Clear existing list before adding new items
         taskList.innerHTML = "";
 
         // Loop through the array and add items to the UL
@@ -66,38 +66,5 @@ const removeTask = (index) => {
 // Add event listener to button
 addButton.addEventListener("click", addTask);
 
-// Initialize visibility on page load
+// Ensure correct visibility when the page loads
 updateListVisibility();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if items.length===0{
-  //hide the not empty division and show empty dividion
-}
-else{
-  //hide the not empty division and show empty division
-  //the ul should contain items in the items array
-}
-
-//add the on click function to add item on input to the array
-
-  
