@@ -1,30 +1,26 @@
-const tasks =[];
-
-const divEmpty = document.getElementsById('empty');
-const divNotEmpty = document.getElementsById('not_empty');
-
+const tasks = [];
+const divEmpty = document.getElementById('empty');
+const divNotEmpty = document.getElementById('not_empty');
 const inputField = document.querySelector('input[type="text"]');
 const todoList = document.getElementById('td_list');
 
-function chooseDisplay(){
-    if (tasks.length===0){
+function chooseDisplay() {
+    if (tasks.length === 0) {
         divEmpty.style.display = 'block';
         divNotEmpty.style.display = 'none';
-    };
-    else{
+    } else {
         divEmpty.style.display = 'none';
         divNotEmpty.style.display = 'block';
     }
 }
 
-function adder(){
-    let inputText = document.getElementById('add_item').value;
-    if (inputText != ""){
+function adder() {
+    let inputText = inputField.value.trim();
+    if (inputText !== "") {
         tasks.push(inputText);
         inputField.value = ""; // Clear the input field
         updateTaskList(); // Update the display
-    }
-    else{
+    } else {
         alert("Item cannot be empty!");
     } 
 }
@@ -41,8 +37,9 @@ function updateTaskList() {
     });
     
     // Update display based on tasks array length
-chooseDisplay();
+    chooseDisplay();
 }
+
 inputField.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         adder();
@@ -51,4 +48,3 @@ inputField.addEventListener('keypress', function(event) {
 
 // Initialize display
 chooseDisplay();
-
