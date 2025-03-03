@@ -9,7 +9,7 @@ function chooseDisplay() {
         divEmpty.style.display = 'block';
         divNotEmpty.style.display = 'none';
     }
-    else {
+    else{
         divEmpty.style.display = 'none';
         divNotEmpty.style.display = 'block';
     }
