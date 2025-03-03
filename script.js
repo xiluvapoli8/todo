@@ -1,10 +1,10 @@
 const tasks =[];
 
 let divEmpty = document.getElementsByClassName('empty');
-let divNotEmpty = document.getElementsByClassName('not_empty);
+let divNotEmpty = document.getElementsByClassName('not_empty');
 
 function chooseDisplay(){
-    if tasks.length===0{
+    if (tasks.length===0){
         divEmpty.style.display = 'none';
         divNotEmpty.style.display = 'block';
     };
