@@ -8,12 +8,12 @@ const todoList = document.getElementById('td_list');
 
 function chooseDisplay(){
     if (tasks.length===0){
-        divEmpty.style.display = 'none';
-        divNotEmpty.style.display = 'block';
-    };
-    else{
         divEmpty.style.display = 'block';
         divNotEmpty.style.display = 'none';
+    };
+    else{
+        divEmpty.style.display = 'none';
+        divNotEmpty.style.display = 'block';
     }
 }
 
