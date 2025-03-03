@@ -1,7 +1,10 @@
 const tasks =[];
 
-let divEmpty = document.getElementsByClassName('empty');
-let divNotEmpty = document.getElementsByClassName('not_empty');
+const divEmpty = document.getElementsById('empty');
+const divNotEmpty = document.getElementsById('not_empty');
+
+const inputField = document.querySelector('input[type="text"]');
+const todoList = document.getElementById('td_list');
 
 function chooseDisplay(){
     if (tasks.length===0){
@@ -23,8 +26,7 @@ function adder(){
     }
     else{
         alert("Item cannot be empty!");
-    }
-    
+    } 
 }
 
 function updateTaskList() {
