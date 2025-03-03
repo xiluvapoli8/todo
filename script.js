@@ -43,7 +43,6 @@ function updateTaskList() {
     // Update display based on tasks array length
 chooseDisplay();
 }
-addButton.addEventListener('click', adder);
 inputField.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         adder();
